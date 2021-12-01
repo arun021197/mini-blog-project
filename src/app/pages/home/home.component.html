@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Blogs</h1>
+  
+    <div *ngFor="let blogs of (blogdetails) , let i=index" >
+        <div class="blogcards">
+            <img src="{{blogs.urlToImage}}" class="blogImg" loading = "lazy" onerror="this.src='../../assets/noimage.jpg'">
+          <div class="blogctn">  
+            <h2 class="title"> <span><b>Title:</b></span>{{blogs.title}}</h2>
+            <p> <b>Description:</b>{{blogs.description}}</p>
+            <button class="readmore"><a [routerLink]="['blogs/',i]">Read More</a></button>
+            <br/><br>
+        </div>
+    </div>
+       
+    </div>
+
+    <button class="more" (click)="navtoallblog()"> View More </button>
+</div>

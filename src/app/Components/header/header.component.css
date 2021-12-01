@@ -1,0 +1,38 @@
+
+.header{
+    height:70px;
+  /* background-color: #708090; */
+    padding:20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+    
+}
+
+
+.header img{
+    width:200px;
+    height:70px;
+    float:left;
+  
+}
+.header ul{
+    float: right;
+}
+.header li{
+    display: inline-block;
+    margin-right: 90px;
+    padding:10px;
+    
+    height:20px;
+    border-radius: 25px;
+    cursor:pointer;
+}
+.header a{
+    text-decoration: none;
+    color:black;
+    font-size: 22px;
+}
+.header li:hover{
+    background-color: white;
+   
+}

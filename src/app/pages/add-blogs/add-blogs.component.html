@@ -1,0 +1,45 @@
+
+                <div class="addblog">
+                  <h1>Add New Blogs</h1>
+                  <div class="formbox">
+                    <form [formGroup]="addblogs">
+
+                        <div class="form-group">
+                          <label>Title:</label>
+                          <input formControlName="title" type="text" class="form-control"> <br>
+                          <span *ngIf="title.invalid && title.touched" class="text-danger">Name is Required</span> 
+                        </div>
+                        <div class="form-group">
+                          <label class="blog-form-input">Author:</label>
+                          <input formControlName="author" type="author" class="form-control" > <br>
+                          <span *ngIf="author.invalid && author.touched" class="text-danger">Author is Required</span>
+                        </div>
+                        <div class="form-group">
+                          <label class="blog-form-input">Content:</label>
+                          <input formControlName="content" type="text" class="form-control" > <br>
+                          <span *ngIf="title.invalid && title.touched" class="text-danger">minimum length 10</span>
+                        </div>
+                        <div class="form-group">
+                          <label class="blog-form-input">Description:</label><br>
+                          <textarea formControlName="description" class="form-control" ></textarea>
+                          <span *ngIf="description.invalid && description.touched" class="text-danger"> minimum length 10</span> 
+                        </div>
+
+                        <div class="form-group">
+                            <label class="blog-form-input">Image URL:</label>
+                            <input formControlName="urlToImage" class="form-control" ><br>
+                            <span *ngIf="urlToImage.invalid && urlToImage.touched" class="text-danger"> ImageUrl is Required</span> 
+                          </div>
+
+                          <div class="form-group">
+                            <label class="blog-form-input">Published At</label>
+                            <input formControlName="publishedAt" class="form-control" > <br>
+                            <span *ngIf="publishedAt.invalid && publishedAt.touched" class="text-danger"> Published At is Required</span> 
+                          </div>
+
+                        <button (click)="onsubmit()"  [disabled]="addblogs.invalid" type="submit" >Add Blog</button>
+                        <button (click)="clicksub()" [disabled]="addblogs.invalid">Reset</button>
+                      
+                      </form>
+                </div>
+              </div>
